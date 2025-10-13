@@ -1,4 +1,4 @@
-#root {
+/*#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,62 @@
 
 .read-the-docs {
   color: #888;
+}*/
+/* App.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3e8ff; /* sehr helles Lila */
+    color: #fff;
 }
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #8e44ad; /* lila */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #6c3483;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #5b2c6f;
+}
+
+.todo-item {
+    background-color: #9b59b6;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+

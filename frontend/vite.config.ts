@@ -9,7 +9,11 @@ export default defineConfig({
             '/api': {
                 target: 'http://localhost:8080',
                 // optional: changeOrigin: true
-            }
+            },
+            '/socket.io': {
+                target: 'http://localhost:8080',
+                ws: true,
+            },
         }
     }
 })
