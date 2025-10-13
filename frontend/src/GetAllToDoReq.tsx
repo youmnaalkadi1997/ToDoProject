@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import './App.css'
 import { Link } from "react-router-dom";
 import { Client } from '@stomp/stompjs';
-import {ToDoStore} from "./ToDoStore.tsx";
+import {ToDoStore} from "./ToDoStore.ts";
 
 
 export default function GetAllToDoReq(){

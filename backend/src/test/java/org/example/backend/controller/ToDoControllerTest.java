@@ -3,6 +3,7 @@ package org.example.backend.controller;
 import org.example.backend.model.Status;
 import org.example.backend.model.ToDo;
 import org.example.backend.repository.ToDoRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.client.AutoConfigureMockRestServiceServer;
@@ -31,8 +32,10 @@ class ToDoControllerTest {
     @Autowired
     private ToDoRepository toDoRepository;
 
-    @Autowired
-    private MockRestServiceServer mockRestServiceServer;
+    @BeforeEach
+    void setup() {
+        toDoRepository.deleteAll();
+    }
 
     @Test
     void getAllToDoReq() throws Exception {
