@@ -9,17 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.client.AutoConfigureMockRestServiceServer;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.test.web.client.MockRestServiceServer;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.client.match.MockRestRequestMatchers.*;
-import static org.springframework.test.web.client.match.MockRestRequestMatchers.content;
-import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -38,6 +32,7 @@ class ToDoControllerTest {
     }
 
     @Test
+    @WithMockUser
     void getAllToDoReq() throws Exception {
 
         ToDo todoList = ToDo.builder().id("1").description("Testing").status(Status.OPEN).build();
@@ -59,6 +54,7 @@ class ToDoControllerTest {
     }
 
     @Test
+    @WithMockUser
     void addToDo() throws Exception {
 
         mockMvc.perform(MockMvcRequestBuilders.post("/api/todo")
