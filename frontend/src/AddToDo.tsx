@@ -34,7 +34,7 @@ export default function AddToDo(){
                 return {
                     ...state,
                     message: action.payload,
-                    error: action.error ?? false, // ← safer than || false
+                    error: action.error ?? false,
                 };
             case "RESET":
                 return initialState;
