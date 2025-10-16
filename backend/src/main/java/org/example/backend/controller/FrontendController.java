@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FrontendController {
     @RequestMapping(value = { "/", "/myapp", "/todo", "/add", "/edit/**", "/delete/**" })
     public String index() {
-        return "forward:/index.html";
+         return "forward:/index.html";
     }
 }
